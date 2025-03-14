@@ -15,10 +15,9 @@ spec:
     - namespaceSelector:
         matchLabels:
           name: db
-    - namespaceSelector: {}
-      ports:
-      - protocol: TCP
-        port: 8080
+    - podSelector:
+        matchLabels:
+          httpdd: dddd
   egress:
   - to:
     - namespaceSelector:
